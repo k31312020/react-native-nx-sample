@@ -27,6 +27,8 @@
   },
   "private": true,
   "dependencies": {
+    "@reduxjs/toolkit": "^1.5.1",
+    "json-server": "^0.16.3",
     "react": "17.0.1",
     "react-native": "0.63.4",
     "tslib": "^2.0.0"
