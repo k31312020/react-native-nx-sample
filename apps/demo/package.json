@@ -6,6 +6,10 @@
     "react-native": "*",
     "react": "*",
     "@testing-library/react-native": "*",
-    "@testing-library/jest-native": "*"
+    "@testing-library/jest-native": "*",
+    "react-native-elements": "*",
+    "react-native-vector-icons": "*",
+    "formik": "*",
+    "yup": "*"
   }
 }
