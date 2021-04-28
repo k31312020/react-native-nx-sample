@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@selise-react/features/auth": ["libs/features/auth/src/index.ts"],
       "@selise-react/features/products": ["libs/features/products/src/index.ts"]
     }
   },
