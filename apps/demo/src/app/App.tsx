@@ -1,5 +1,6 @@
 import React from 'react';
-import {SignIn, SignUp} from '@selise-react/features/auth'
+// import {SignIn, SignUp} from '@selise-react/features/auth'
+import ProductForm from '@selise-react/features/products';
 import {
   SafeAreaView,
   StyleSheet,
@@ -20,9 +21,7 @@ import {
 import openURLInBrowser from 'react-native/Libraries/Core/Devtools/openURLInBrowser';
 
 const App = () => {
-  return (
-    <SignUp></SignUp>
-  );
+  return <ProductForm />;
 };
 
 const styles = StyleSheet.create({
