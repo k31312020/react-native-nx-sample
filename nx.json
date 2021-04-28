@@ -24,6 +24,9 @@
     },
     "features-auth": {
       "tags": []
+    },
+    "features-products": {
+      "tags": []
     }
   }
 }
