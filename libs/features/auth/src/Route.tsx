@@ -4,14 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack'
 import React from 'react';
 
-const Auth ={
-    SignIn : {
-        screen: SignIn
-    },
-    SignUp : {
-        screen: SignUp
-    },
-}
+
   
   const Stack = createStackNavigator();
   
