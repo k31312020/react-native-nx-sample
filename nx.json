@@ -22,6 +22,12 @@
     "demo": {
       "tags": []
     },
+    "features-auth": {
+      "tags": []
+    },
+    "features-products": {
+      "tags": []
+    },
     "features-listing": {
       "tags": []
     }

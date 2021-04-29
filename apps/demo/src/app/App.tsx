@@ -1,86 +1,12 @@
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  Image,
-  View,
-  Text,
-  StatusBar,
-  TouchableOpacity,
-} from 'react-native';
+import ProductForm from '@selise-react/features/products';
+import {Text} from 'react-native'
+import Route from '@selise-react/features/auth'
 
-import {
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-import { ProductsHome } from '@selise-react/features/listing';
-
-
-const App = () => {
-  return (
-    <SafeAreaView>
-      <ScrollView>
-        <ProductsHome></ProductsHome>
-      </ScrollView>
-    </SafeAreaView>
-  );
-};
-
-const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
-  },
-  header: {
-    backgroundColor: '#143055',
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingVertical: 24,
-  },
-  logo: {
-    width: 200,
-    height: 180,
-    resizeMode: 'contain',
-  },
-  heading: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.lighter,
-  },
-  body: {
-    backgroundColor: Colors.white,
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
-  },
-  link: {
-    color: '#45bc98',
-  },
-});
+const App = () => (
+  <Route></Route>
+);
 
 export default App;
