@@ -1,0 +1,15 @@
+{
+  "User": {
+    "username": "string",
+    "email": "string"
+  },
+  "Product": {
+    "skuid": "int",
+    "productName": "string",
+    "quantity": "int",
+    "price": "int",
+    "category": "string",
+    "color": "string",
+    "description": "string"
+  }
+}
