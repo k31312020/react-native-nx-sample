@@ -3,12 +3,13 @@ import {Formik} from 'formik'
 import {TextInput, Button, View, Text} from 'react-native'
 import {styles} from './style'
 import {signUpValidation} from '../validator/validator'
+import {Service} from '../services/services';
 
 export const SignUp = ({navigation}) => (
   <View style = {styles.container}>
       
       <Text style={styles.title}>Sign Up</Text>
-      <Formik initialValues = {{email: '', username: '', password: ''}} validationSchema = {signUpValidation} onSubmit={ async values => console.log(values)}>
+      <Formik initialValues = {{email: '', username: '', password: ''}} validationSchema = {signUpValidation} onSubmit={ values => {Service(values)}}>
          {({ errors, touched, setFieldTouched,  handleChange, handleSubmit, values }) => (
               <View style={styles.formContainer}>
               <TextInput
@@ -48,7 +49,7 @@ export const SignUp = ({navigation}) => (
                 style={styles.button}
               />
               <View style = {styles.signUpTextContainer}>
-                <Text style = {styles.text}>Already register?  <Text style={styles.signUp} onPress={() => navigation.push('signin')}>Sign In</Text></Text>
+                <Text style = {styles.text}>Already register?  <Text style={styles.signUp} onPress={() => navigation.navigate('signin')}>Sign In</Text></Text>
               </View>
             </View>
          )}
