@@ -3,6 +3,7 @@ module.exports = {
     '<rootDir>/apps/demo',
     '<rootDir>/libs/features/auth',
     '<rootDir>/libs/features/products',
-    '<rootDir>/libs/shared',
-  ],
+    '<rootDir>/libs/features/interceptor',
+    '<rootDir>/libs/shared'
+  ]
 };

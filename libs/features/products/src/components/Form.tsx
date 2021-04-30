@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, Alert, Text } from 'react-native';
+import { ScrollView, Alert, Text, View } from 'react-native';
 import { Button } from 'react-native-elements';
 import { styles } from './FormStyle';
 import { Formik } from 'formik';

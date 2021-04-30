@@ -20,6 +20,9 @@
         "libs/features/products/src/index.ts"
       ],
       "@selise-react/features/listing": ["libs/features/listing/src/index.ts"],
+      "@selise-react/features/interceptor": [
+        "libs/features/interceptor/src/index.ts"
+      ],
       "@selise-react/shared": ["libs/shared/src/index.ts"]
     }
   },
