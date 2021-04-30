@@ -16,6 +16,7 @@
     "react-native-elements": "*",
     "formik": "*",
     "yup": "*",
-    "@react-native-picker/picker": "*"
+    "@react-native-picker/picker": "*",
+    "react-native-vector-icons": "*"
   }
 }

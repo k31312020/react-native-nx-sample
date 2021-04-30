@@ -48,6 +48,7 @@
     "react-navigation": "^4.4.4",
     "tslib": "^2.0.0",
     "yup": "^0.32.9"
+    
   },
   "devDependencies": {
     "@babel/core": "7.9.6",
