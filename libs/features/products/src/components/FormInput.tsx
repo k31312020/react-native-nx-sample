@@ -16,10 +16,10 @@ export const FormInput = ({
     case 'text': {
       return (
         <Input
-          containerStyle={styles.input}
           label={label}
           placeholder={placeholder || label}
           errorMessage={error}
+          inputStyle={styles.input}
           errorStyle={styles.error}
           {...otherProps}
         />

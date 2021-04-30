@@ -30,6 +30,9 @@
     },
     "features-listing": {
       "tags": []
+    },
+    "features-interceptor": {
+      "tags": []
     }
   }
 }
