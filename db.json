@@ -25,6 +25,16 @@
       "category": "tshirt",
       "color": "blue",
       "description": "none"
+    },
+    {
+      "skuid": "123",
+      "productName": "asdf",
+      "description": "asdf",
+      "category": "asdf",
+      "price": "123",
+      "quantity": "123",
+      "color": "orange",
+      "id": 3
     }
   ]
 }
