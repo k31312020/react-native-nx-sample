@@ -8,7 +8,7 @@ export const SignUp = ({navigation}) => (
   <View style = {styles.container}>
       
       <Text style={styles.title}>Sign Up</Text>
-      <Formik initialValues = {{email: '', username: '', password: ''}} validationSchema = {signUpValidation} onSubmit={ values => {console.log(values)}}>
+      <Formik initialValues = {{email: '', username: '', password: ''}} validationSchema = {signUpValidation} onSubmit={ async values => console.log(values)}>
          {({ errors, touched, setFieldTouched,  handleChange, handleSubmit, values }) => (
               <View style={styles.formContainer}>
               <TextInput
