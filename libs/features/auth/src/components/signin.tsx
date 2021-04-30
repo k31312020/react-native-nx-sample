@@ -2,13 +2,14 @@ import React from 'react';
 import {Formik} from 'formik'
 import {TextInput, Button, View, Text} from 'react-native'
 import {styles} from './style'
+import Service from '../services/services'
 import {signInValidation} from '../validator/validator'
 
 export const SignIn = ({navigation}) => (
   <View style = {styles.container}>
 
       <Text style={styles.title}>Sign In</Text>
-      <Formik initialValues = {{email: '', password: ''}} validationSchema = {signInValidation} onSubmit={ values => {console.log(values)}}>
+      <Formik initialValues = {{email: '', password: ''}} validationSchema = {signInValidation} onSubmit={ values => {if(values.email === 'jigme@selise.ch' && values.password === '123456') {navigation.navigate('Home')};} }>
          {({ errors, touched, setFieldTouched,  handleChange, handleSubmit, values }) => (
               <View style={styles.formContainer}>
               <TextInput
@@ -38,7 +39,7 @@ export const SignIn = ({navigation}) => (
                 style={styles.button}
               />
               <View style = {styles.signUpTextContainer}>
-              <Text style = {styles.text}>Don't have an account?  <Text style={styles.signUp} onPress={() => navigation.push('SignUp')}>Sign Up</Text></Text>
+              <Text style = {styles.text}>Don't have an account?  <Text style={styles.signUp} onPress={() => navigation.navigate('SignUp')}>Sign Up</Text></Text>
               </View>
             </View>
          )}

@@ -1,20 +1,20 @@
 import { SignUp } from './components/signup';
 import { SignIn } from './components/signin';
-import { NavigationContainer } from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack'
 import React from 'react';
+import {Text} from 'react-native'
+import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 
+const Home = ({navigation}) => (
+  <Text onPress = {() => navigation.navigate('SignIn')}>THis is Home</Text>
+)
 
+const demo = createSwitchNavigator({
+  SignIn: SignIn,
+  SignUp: SignUp,
+  Home: Home
+})
+ 
   
-  const Stack = createStackNavigator();
   
-  const Route = () => (
-      <NavigationContainer>
-          <Stack.Navigator headerMode='none'>
-          <Stack.Screen name="SignIn" component={SignIn} />
-          <Stack.Screen name="SignUp" component={SignUp} />
-          </Stack.Navigator>
-      </NavigationContainer>
-  );
 
-export default Route;
+export default createAppContainer(demo);
