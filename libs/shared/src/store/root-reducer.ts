@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
 import { productsReducer } from '@selise-react/features/listing';
-const rootReducer = combineReducers({
+import { userReducer } from '@selise-react/features/auth';
+
+export const rootReducer = combineReducers({
  products: productsReducer,
+ user: userReducer
 });
-export default rootReducer;

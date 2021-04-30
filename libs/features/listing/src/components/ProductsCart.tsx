@@ -1,32 +1,25 @@
-import React, { useState } from 'react';
-import { Card, SearchBar, Button } from 'react-native-elements';
+import React from 'react';
+import { Card, Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { useSelector, useDispatch } from 'react-redux'; 
 
 export const ProductsCart = () =>  {
-    const [search] = useState();
+    const cart = useSelector(store => store['products'].cart);
 
-    const updateSearch = (event) => {
+    const dispatch = useDispatch();
 
+    const removeFromCart = (product) => {
+        dispatch({type: 'REMOVE_FROM_CART', product});
     }
-
-    const products = [
-        {
-            id: 1,
-            name: 'Test 1'
-        },
-        {
-            id: 2,
-            name: 'Test 2'
-        }
-    ]
 
     return (
         <>
-            {products.map((product) => {
+            {cart.map((product) => {
                 return (
                     <Card key={product.id}>
-                        <Card.Title>{product.name}</Card.Title>
-                        <Icon name="file-photo-o" size={50} color="#900" />
+                        <Card.Title>{product.productName}</Card.Title>
+                        <Icon name="file-photo-o" size={50} />
+                        <Button title="Remove" icon={<Icon name="remove" size={30} />} onPress={() => removeFromCart(product)}></Button>
                     </Card>
                 );
             })}

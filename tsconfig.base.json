@@ -16,8 +16,11 @@
     "baseUrl": ".",
     "paths": {
       "@selise-react/features/auth": ["libs/features/auth/src/index.ts"],
-      "@selise-react/features/products": ["libs/features/products/src/index.ts"],
-      "@selise-react/features/listing": ["libs/features/listing/src/index.ts"]
+      "@selise-react/features/products": [
+        "libs/features/products/src/index.ts"
+      ],
+      "@selise-react/features/listing": ["libs/features/listing/src/index.ts"],
+      "@selise-react/shared": ["libs/shared/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

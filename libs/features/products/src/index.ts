@@ -1,3 +1,1 @@
-import { Form } from './components/Form';
-
-export default Form;
+export * from './components/Form';

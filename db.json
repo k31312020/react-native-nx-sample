@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "email": "kg@selise.ch",
+      "password": "selise88"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "skuid": 1,
+      "productName": "Product One",
+      "quantity": 10,
+      "price": "200",
+      "category": "tshirt",
+      "color": "black",
+      "description": "none"
+    },
+    {
+      "id": 2,
+      "skuid": 2,
+      "productName": "Product Two",
+      "quantity": 20,
+      "price": "300",
+      "category": "tshirt",
+      "color": "blue",
+      "description": "none"
+    }
+  ]
+}

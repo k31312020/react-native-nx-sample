@@ -146,6 +146,29 @@
           }
         }
       }
+    },
+    "shared": {
+      "root": "libs/shared",
+      "sourceRoot": "libs/shared/src",
+      "projectType": "library",
+      "generators": {},
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

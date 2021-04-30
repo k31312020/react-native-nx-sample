@@ -5,6 +5,8 @@ import { styles } from './FormStyle';
 import { Formik } from 'formik';
 import ProductSchema from '../validations/ProductSchema';
 import { FormInput } from './FormInput';
+import { useDispatch } from 'react-redux';
+import { addProductEffect } from '../store/actions';
 
 const colorOptions = [
   { label: 'Blue', value: 'blue' },
@@ -15,7 +17,14 @@ const colorOptions = [
   { label: 'Yellow', value: 'yellow' },
 ];
 
-export const Form = () => {
+export const ProductForm = () => {
+
+  const dispatch = useDispatch();
+
+  const addProduct = (form) => {
+    dispatch(addProductEffect(form));
+  }
+
   return (
     <Formik
       initialValues={{
@@ -27,10 +36,7 @@ export const Form = () => {
         quantity: '',
         color: '',
       }}
-      onSubmit={(values) => {
-        Alert.alert('Product created');
-        console.log(JSON.stringify(values));
-      }}
+      onSubmit={addProduct}
       validationSchema={ProductSchema}
     >
       {({

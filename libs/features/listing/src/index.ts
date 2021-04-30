@@ -1,2 +1,2 @@
 export * from './components/ProductsHome';
-export * from './reducers';
+export * from './store/reducers';

@@ -48,7 +48,7 @@ export const SignUp = ({navigation}) => (
                 style={styles.button}
               />
               <View style = {styles.signUpTextContainer}>
-                <Text style = {styles.text}>Already register?  <Text style={styles.signUp} onPress={() => navigation.push('SignIn')}>Sign In</Text></Text>
+                <Text style = {styles.text}>Already register?  <Text style={styles.signUp} onPress={() => navigation.push('signin')}>Sign In</Text></Text>
               </View>
             </View>
          )}

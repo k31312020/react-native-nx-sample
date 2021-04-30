@@ -1,24 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, SearchBar, Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { useDispatch, useSelector } from 'react-redux';
+import { getProductsEffect } from '../store/actions';
 
 export const ProductsList = () =>  {
     let [search, setSearch] = useState<string>();
 
-    const updateSearch = (text: string) => {
-        setSearch(text);
+
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getProductsEffect());
+    }, []);
+
+    const updateSearch = (query: string) => {
+        setSearch(query);
+        dispatch(getProductsEffect(query))
     }
 
-    const products = [
-        {
-            id: 1,
-            name: 'Test 1'
-        },
-        {
-            id: 2,
-            name: 'Test 2'
-        }
-    ]
+    const addToCart = (product) => {
+        dispatch({type: 'ADD_TO_CART', product})
+    }
+
+    const products = useSelector(store => store['products'].products);
 
     return (
         <>
@@ -31,10 +36,10 @@ export const ProductsList = () =>  {
             {products.map((product) => {
                 return (
                     <Card key={product.id}>
-                        <Card.Title>{product.name}</Card.Title>
-                        <Icon name="file-photo-o" size={50} color="#900" />
+                        <Card.Title>{product.productName}</Card.Title>
+                        <Icon name="file-photo-o" size={50} />
                         <Card.Divider/>
-                        <Button title="Add to cart" icon={<Icon name="cart-plus" size={30} color="#900" />}></Button>
+                        <Button title="Add to cart" icon={<Icon name="cart-plus" size={30} />} onPress={() => addToCart(product)}></Button>
                     </Card>
                 );
             })}

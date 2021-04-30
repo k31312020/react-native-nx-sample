@@ -1,12 +1,18 @@
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+
 import React from 'react';
-import ProductForm from '@selise-react/features/products';
-import {Text} from 'react-native'
-import Route from '@selise-react/features/auth'
+import { Route } from '@selise-react/shared';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import { rootReducer } from '@selise-react/shared';
+import thunk from 'redux-thunk';
+import { applyMiddleware } from 'redux';
+
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
 const App = () => (
-  <Route></Route>
+  <Provider store={store}>
+    <Route></Route>
+  </Provider>
 );
 
 export default App;
