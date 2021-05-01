@@ -2,9 +2,9 @@ export const logOut = () => ({
     type: 'LOGOUT'
 });
 
-export const logOutEffect = (navigation) => {
+export const logOutEffect = (navigation) => { 
     return function(dispatch) {
-        dispatch('LOGOUT');
+        dispatch({type: 'LOGOUT'});
         return navigation.navigate('signin');
     }
 }

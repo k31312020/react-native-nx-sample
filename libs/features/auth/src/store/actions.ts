@@ -20,6 +20,6 @@ export const logInEffect = (form: User, navigation) => {
                 return navigation.navigate('home');
               }
            }
-        );
+        ).catch(err => console.log(err));
     };
 }

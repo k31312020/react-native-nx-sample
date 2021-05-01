@@ -1,8 +1,19 @@
 {
   "users": [
     {
+      "id": 1,
       "email": "kg@selise.ch",
       "password": "selise88"
+    },
+    {
+      "email": "jigme@lodey.com",
+      "password": "123123",
+      "id": 11
+    },
+    {
+      "email": "jigme@lodey.ch",
+      "password": "123123",
+      "id": 12
     }
   ],
   "products": [
