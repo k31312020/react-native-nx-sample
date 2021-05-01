@@ -5,7 +5,7 @@ export const logOut = () => ({
 
 export const logOutEffect = (navigation) => {
   return function (dispatch) {
-    dispatch('LOGOUT');
+    dispatch({type: 'LOGOUT'});
     return navigation.navigate('signin');
   };
 };
