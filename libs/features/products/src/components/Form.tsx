@@ -17,11 +17,11 @@ const colorOptions = [
   { label: 'Yellow', value: 'yellow' },
 ];
 
-export const ProductForm = ({ navigation }) => {
+export const ProductForm = () => {
   const dispatch = useDispatch();
 
   const addProduct = (form) => {
-    dispatch(addProductEffect(form, navigation));
+    dispatch(addProductEffect(form));
   };
 
   return (
@@ -29,13 +29,13 @@ export const ProductForm = ({ navigation }) => {
       <Text style={styles.header}>Create Product</Text>
       <Formik
         initialValues={{
-          skuid: '123',
-          productName: 'asdf',
-          description: 'asdf',
-          category: 'asdf',
-          price: '123',
-          quantity: '123',
-          color: 'orange',
+          skuid: '',
+          productName: '',
+          description: '',
+          category: '',
+          price: '',
+          quantity: '',
+          color: '',
         }}
         onSubmit={addProduct}
         validationSchema={ProductSchema}
