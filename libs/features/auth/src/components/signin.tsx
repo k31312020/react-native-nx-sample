@@ -49,7 +49,6 @@ export const SignIn = ({ navigation }) => {
             />
             <View style={styles.signUpTextContainer}>
               <Text style={styles.text}>Don't have an account?  <Text style={styles.signUp} onPress={() => navigation.navigate('signup')}>Sign Up</Text></Text>
-              <Text style={styles.text}>Don't have an account?  <Text style={styles.signUp} onPress={() => navigation.push('signup')}>Sign Up</Text></Text>
             </View>
           </View>
         )}
