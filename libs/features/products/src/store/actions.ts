@@ -1,5 +1,4 @@
 export const addProductEffect = (product) => {
-  console.log(JSON.stringify(product));
   return function (dispatch) {
     fetch('http://10.0.2.2:3000/products', {
       method: 'POST',
@@ -12,6 +11,12 @@ export const addProductEffect = (product) => {
       .then((products) => {
         return '';
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        dispatch({
+          type: 'SHOW_ERROR',
+          error: 'Could not create product. Try again.',
+        });
+        console.log(err);
+      });
   };
 };
