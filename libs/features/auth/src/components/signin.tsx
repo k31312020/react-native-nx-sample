@@ -1,9 +1,8 @@
 import React from 'react';
-import { Formik } from 'formik'
-import { TextInput, Button, View, Text } from 'react-native'
-import { styles } from './style'
-import Service from '../services/services'
-import { signInValidation } from '../validator/validator'
+import { Formik } from 'formik';
+import { TextInput, Button, View, Text } from 'react-native';
+import { styles } from './style';
+import { signInValidation } from '../validator/validator';
 import { User } from '../models/user.model';
 import { useDispatch } from 'react-redux';
 import { logInEffect} from '../store/actions';
@@ -53,7 +52,7 @@ export const SignIn = ({ navigation }) => {
               style={styles.button}
             />
             <View style={styles.signUpTextContainer}>
-              <Text style={styles.text}>Don't have an account?  <Text style={styles.signUp} onPress={() => navigation.push('signup')}>Sign Up</Text></Text>
+              <Text style={styles.text}>Don't have an account?  <Text style={styles.signUp} onPress={() => navigation.navigate('signup')}>Sign Up</Text></Text>
             </View>
           </View>
         )}

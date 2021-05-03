@@ -2,8 +2,8 @@
 import React from 'react';
 import { Route } from '@selise-react/shared';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import { rootReducer } from '@selise-react/shared';
+import { createStore,  } from 'redux';
+import {rootReducer}  from '@selise-react/shared';
 import thunk from 'redux-thunk';
 import { applyMiddleware } from 'redux';
 
