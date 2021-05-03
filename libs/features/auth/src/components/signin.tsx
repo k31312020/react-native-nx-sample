@@ -7,8 +7,12 @@ import { signInValidation } from '../validator/validator'
 import { User } from '../models/user.model';
 import { useDispatch } from 'react-redux';
 import { logInEffect} from '../store/actions';
-
+import { LanguageSwitcher } from '@selise-react/shared';
+import { useTranslation } from 'react-i18next';
+ 
 export const SignIn = ({ navigation }) => {
+
+  const { t } = useTranslation();
 
   const dispatch = useDispatch();
 
@@ -27,7 +31,7 @@ export const SignIn = ({ navigation }) => {
               onChangeText={handleChange('email')}
               onBlur={() => setFieldTouched('email')}
               style={styles.input}
-              placeholder="Email"
+              placeholder={t('EMAIL')}
             />
             {touched.email && errors.email && (
               <Text style={styles.error}>{errors.email}</Text>
@@ -37,7 +41,7 @@ export const SignIn = ({ navigation }) => {
               onChangeText={handleChange('password')}
               onBlur={() => setFieldTouched('password')}
               style={styles.input}
-              placeholder="Password"
+              placeholder={t('PASSWORD')}
               secureTextEntry
             />
             {touched.password && errors.password && (
@@ -45,7 +49,7 @@ export const SignIn = ({ navigation }) => {
             )}
             <Button
               onPress={handleSubmit}
-              title="Sign In"
+              title={t('SIGN_IN')}
               style={styles.button}
             />
             <View style={styles.signUpTextContainer}>
@@ -54,6 +58,7 @@ export const SignIn = ({ navigation }) => {
           </View>
         )}
       </Formik>
+      <LanguageSwitcher/>
     </View>
   )
 }

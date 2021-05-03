@@ -25,6 +25,76 @@
       "category": "tshirt",
       "color": "blue",
       "description": "none"
-    }
+    },
+    {
+      "id": 3,
+      "skuid": 3,
+      "productName": "Product Three",
+      "quantity": 30,
+      "price": "400",
+      "category": "tshirt",
+      "color": "brown",
+      "description": "none"
+    },
+    {
+        "id": 4,
+        "skuid": 4,
+        "productName": "Product four",
+        "quantity": 10,
+        "price": "200",
+        "category": "tshirt",
+        "color": "black",
+        "description": "none"
+      },
+      {
+        "id": 5,
+        "skuid": 5,
+        "productName": "Product five",
+        "quantity": 20,
+        "price": "300",
+        "category": "tshirt",
+        "color": "blue",
+        "description": "none"
+      },
+      {
+        "id": 6,
+        "skuid": 6,
+        "productName": "Product six",
+        "quantity": 30,
+        "price": "400",
+        "category": "tshirt",
+        "color": "brown",
+        "description": "none"
+      },
+      {
+        "id": 7,
+        "skuid": 7,
+        "productName": "Product Seven",
+        "quantity": 10,
+        "price": "200",
+        "category": "tshirt",
+        "color": "black",
+        "description": "none"
+      },
+      {
+        "id": 8,
+        "skuid": 8,
+        "productName": "Product eight",
+        "quantity": 20,
+        "price": "300",
+        "category": "tshirt",
+        "color": "blue",
+        "description": "none"
+      },
+      {
+        "id": 9,
+        "skuid": 9,
+        "productName": "Product nine",
+        "quantity": 30,
+        "price": "400",
+        "category": "tshirt",
+        "color": "brown",
+        "description": "none"
+      }
   ]
 }

@@ -13,8 +13,8 @@ export const signUp = () => ({
 export const logInEffect = (form: User, navigation) => {
     return function(dispatch) {
         return getUsers().then(
-          (users: User[]) => {
-              const user = users.find(user => user.email === form.email);
+          (response) => {
+              const user = response.data.find(user => user.email === form.email);
               if (user) {
                 dispatch(logIn(user));
                 return navigation.navigate('home');

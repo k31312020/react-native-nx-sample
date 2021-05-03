@@ -10,9 +10,9 @@ import { applyMiddleware } from 'redux';
 const store = createStore(rootReducer, applyMiddleware(thunk));
 
 const App = () => (
-  <Provider store={store}>
-    <Route></Route>
-  </Provider>
+    <Provider store={store}>
+      <Route></Route>
+    </Provider>
 );
 
 export default App;

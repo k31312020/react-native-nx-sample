@@ -19,6 +19,10 @@
     "@react-native-picker/picker": "*",
     "react-native-vector-icons": "*",
     "@react-navigation/stack": "*",
-    "react-redux": "*"
+    "react-redux": "*",
+    "i18next": "*",
+    "react-i18next": "*",
+    "axios": "*",
+    "react-native-dotenv": "*"
   }
 }

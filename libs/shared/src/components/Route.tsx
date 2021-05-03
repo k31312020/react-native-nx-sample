@@ -4,7 +4,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import React from 'react';
 import { ProductsHome } from '@selise-react/features/listing';
 import { ProductForm } from '@selise-react/features/products';
-import { WithNavmenu } from '@selise-react/shared';
+import { WithNavmenu } from './WithNavmenu';
 
 const Stack = createStackNavigator();
 
