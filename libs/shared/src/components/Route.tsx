@@ -25,7 +25,7 @@ export const Route = () => {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator headerMode="none">
+      <Stack.Navigator initialRouteName="create" headerMode="none">
         <Stack.Screen name="signin" component={SignIn} />
         <Stack.Screen name="signup" component={SignUp} />
         <Stack.Screen name="home" component={WithNavmenu(ProductsHome)} />

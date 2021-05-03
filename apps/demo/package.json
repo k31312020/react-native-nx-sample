@@ -25,6 +25,7 @@
     "axios": "*",
     "react-native-dotenv": "*",
     "react-native-snackbar": "*",
-    "redux-persist": "*"
+    "redux-persist": "*",
+    "react-native-image-picker": "*"
   }
 }
