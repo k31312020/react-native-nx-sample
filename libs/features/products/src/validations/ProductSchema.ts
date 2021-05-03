@@ -12,6 +12,7 @@ const Schema = yup.object().shape({
   category: yup.string().typeError(error_text.type).required(),
   color: yup.string().typeError(error_text.type).required(),
   description: yup.string().typeError(error_text.type).max(200),
+  imgURI: yup.string(),
 });
 
 export default Schema;

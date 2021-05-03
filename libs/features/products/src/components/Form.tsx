@@ -1,12 +1,17 @@
-import React from 'react';
-import { ScrollView, Text, View } from 'react-native';
-import { Button } from 'react-native-elements';
+import React, { useState } from 'react';
+import { ScrollView, Text, View, ActivityIndicator } from 'react-native';
+import { Button, Image } from 'react-native-elements';
 import { styles } from './FormStyle';
 import { Formik } from 'formik';
 import ProductSchema from '../validations/ProductSchema';
 import { FormInput } from './FormInput';
 import { useDispatch } from 'react-redux';
 import { addProductEffect } from '../store/actions';
+import {
+  launchImageLibrary,
+  ImageLibraryOptions,
+} from 'react-native-image-picker';
+import ProductImageInput from './ProductImageInput';
 
 const colorOptions = [
   { label: 'Blue', value: 'blue' },
@@ -29,13 +34,14 @@ export const ProductForm = () => {
       <Text style={styles.header}>Create Product</Text>
       <Formik
         initialValues={{
-          skuid: '123',
-          productName: 'asdf',
-          description: 'asdf',
-          category: 'sony',
-          price: '123',
-          quantity: '1',
-          color: 'orange',
+          skuid: '',
+          productName: '',
+          description: '',
+          category: '',
+          price: '',
+          quantity: '',
+          color: '',
+          imgURI: '',
         }}
         onSubmit={addProduct}
         validationSchema={ProductSchema}
@@ -50,6 +56,10 @@ export const ProductForm = () => {
           setFieldValue,
         }) => (
           <View style={styles.formContainer}>
+            <ProductImageInput
+              onAddImage={(value) => setFieldValue('imgURI', value)}
+            />
+
             <FormInput
               type="number"
               label="SKUID"
