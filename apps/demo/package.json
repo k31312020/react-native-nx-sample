@@ -23,6 +23,8 @@
     "i18next": "*",
     "react-i18next": "*",
     "axios": "*",
-    "react-native-dotenv": "*"
+    "react-native-dotenv": "*",
+    "react-native-snackbar": "*",
+    "redux-persist": "*"
   }
 }

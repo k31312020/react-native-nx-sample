@@ -29,13 +29,13 @@ export const ProductForm = () => {
       <Text style={styles.header}>Create Product</Text>
       <Formik
         initialValues={{
-          skuid: '',
-          productName: '',
-          description: '',
-          category: '',
-          price: '',
-          quantity: '',
-          color: '',
+          skuid: '123',
+          productName: 'asdf',
+          description: 'asdf',
+          category: 'sony',
+          price: '123',
+          quantity: '1',
+          color: 'orange',
         }}
         onSubmit={addProduct}
         validationSchema={ProductSchema}

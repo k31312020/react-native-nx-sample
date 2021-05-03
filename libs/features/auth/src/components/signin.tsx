@@ -5,25 +5,35 @@ import { styles } from './style';
 import { signInValidation } from '../validator/validator';
 import { User } from '../models/user.model';
 import { useDispatch } from 'react-redux';
-import { logInEffect} from '../store/actions';
+import { logInEffect } from '../store/actions';
 import { LanguageSwitcher } from '@selise-react/shared';
 import { useTranslation } from 'react-i18next';
- 
-export const SignIn = ({ navigation }) => {
 
+export const SignIn = ({ navigation }) => {
   const { t } = useTranslation();
 
   const dispatch = useDispatch();
 
   const onSignIn = (form: User) => {
     dispatch(logInEffect(form, navigation));
-  }
+  };
 
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Sign In</Text>
-      <Formik initialValues={{ email: '', password: '' }} validationSchema={signInValidation} onSubmit={onSignIn}>
-        {({ errors, touched, setFieldTouched, handleChange, handleSubmit, values }) => (
+      <Formik
+        initialValues={{ email: '', password: '' }}
+        validationSchema={signInValidation}
+        onSubmit={onSignIn}
+      >
+        {({
+          errors,
+          touched,
+          setFieldTouched,
+          handleChange,
+          handleSubmit,
+          values,
+        }) => (
           <View style={styles.formContainer}>
             <TextInput
               value={values.email}
@@ -52,12 +62,20 @@ export const SignIn = ({ navigation }) => {
               style={styles.button}
             />
             <View style={styles.signUpTextContainer}>
-              <Text style={styles.text}>Don't have an account?  <Text style={styles.signUp} onPress={() => navigation.navigate('signup')}>Sign Up</Text></Text>
+              <Text style={styles.text}>
+                Don't have an account?{' '}
+                <Text
+                  style={styles.signUp}
+                  onPress={() => navigation.navigate('signup')}
+                >
+                  Sign Up
+                </Text>
+              </Text>
             </View>
           </View>
         )}
       </Formik>
-      <LanguageSwitcher/>
+      <LanguageSwitcher />
     </View>
-  )
-}
+  );
+};
