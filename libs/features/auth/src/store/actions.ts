@@ -17,7 +17,7 @@ export const logInEffect = (form: User, navigation) => {
         const user = response.data.find((user) => user.email === form.email);
         if (user) {
           dispatch(logIn(user));
-          return navigation.navigate('home');
+          return navigation.navigate('main', { screen: 'home' });
         }
       })
       .catch((err) =>
