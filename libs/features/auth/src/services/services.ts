@@ -2,7 +2,6 @@ import { getUsers } from './api';
 
 export const Service = ({ email, password, dispatch }) =>
   getUsers().then((res) => {
-    debugger;
     console.log({ response: res.data });
     const user = res.data.find((user) => user.email === email);
     console.log('userfound' + user);

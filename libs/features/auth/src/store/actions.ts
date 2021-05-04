@@ -18,12 +18,19 @@ export const logInEffect = (form: User, navigation) => {
         if (user) {
           dispatch(logIn(user));
           return navigation.navigate('home');
+        } else {
+          return dispatch({
+            type: 'SHOW_ERROR',
+            error: 'Could not login. Try again.',
+            msgType: 'error'
+          })
         }
       })
       .catch((err) =>
         dispatch({
           type: 'SHOW_ERROR',
           error: 'Could not login. Try again.',
+          msgType: 'error'
         })
       );
   };

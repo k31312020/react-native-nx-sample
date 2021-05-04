@@ -1,20 +1,22 @@
-export const addProductEffect = (product) => {
+import { createProduct } from "../services/api";
+
+export const addProductEffect = (product, navigate) => {
+
   return function (dispatch) {
-    fetch('http://10.0.2.2:3000/products', {
-      method: 'POST',
-      body: JSON.stringify(product),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
-      .then((response) => response.json())
+    createProduct(product)
       .then((products) => {
-        return '';
+        navigate('home');
+        return dispatch({
+          type: 'SHOW_ERROR',
+          error: 'Product added successfully',
+          msgType: 'success'
+        });
       })
       .catch((err) => {
         dispatch({
           type: 'SHOW_ERROR',
           error: 'Could not create product. Try again.',
+          msgType: 'error'
         });
         console.log(err);
       });

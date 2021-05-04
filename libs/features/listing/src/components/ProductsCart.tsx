@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { useSelector, useDispatch } from 'react-redux'; 
+import { styles } from './styles';
 
 export const ProductsCart = () =>  {
     const cart = useSelector(store => store['products'].cart);
@@ -18,8 +19,8 @@ export const ProductsCart = () =>  {
                 return (
                     <Card key={product.id}>
                         <Card.Title>{product.productName}</Card.Title>
-                        <Icon name="file-photo-o" size={50} />
-                        <Button title="Remove" icon={<Icon name="remove" size={30} />} onPress={() => removeFromCart(product)}></Button>
+                        <Icon style={styles.image} name="file-photo-o" size={50} />
+                        <Button title="Remove" icon={<Icon style={styles.mRight} name="remove" size={30} />} onPress={() => removeFromCart(product)}></Button>
                     </Card>
                 );
             })}

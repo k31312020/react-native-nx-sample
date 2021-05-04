@@ -7,6 +7,7 @@ import { WithNavmenu } from './WithNavmenu';
 import { SignIn, SignUp } from '@selise-react/features/auth';
 import { ProductsHome } from '@selise-react/features/listing';
 import { ProductForm } from '@selise-react/features/products';
+import theme from 'react-native-elements/dist/config/theme';
 
 const Stack = createStackNavigator();
 
@@ -18,7 +19,7 @@ export const Route = () => {
       Snackbar.show({
         text: error['error'],
         duration: Snackbar.LENGTH_SHORT,
-        backgroundColor: '#CC3366',
+        backgroundColor: error['msgType'] === 'error' ? theme.colors.error : theme.colors.success,
       });
     }
   }, [error]);
