@@ -12,6 +12,7 @@ import {
   ImageLibraryOptions,
 } from 'react-native-image-picker';
 import ProductImageInput from './ProductImageInput';
+import { useNavigation } from '@react-navigation/native';
 
 const colorOptions = [
   { label: 'Blue', value: 'blue' },
@@ -25,8 +26,10 @@ const colorOptions = [
 export const ProductForm = () => {
   const dispatch = useDispatch();
 
+  const { navigate } = useNavigation();
+
   const addProduct = (form) => {
-    dispatch(addProductEffect(form));
+    dispatch(addProductEffect(form, navigate));
   };
 
   return (
